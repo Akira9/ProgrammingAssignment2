@@ -9,14 +9,12 @@ makeCacheMatrix <- function(x = matrix()) {
   set<-function(mat){
     x<<-mat
     inv<-NULL
-    
   }
   get<-function() x
   setInv<-function(y) inv<<-y
   getInv<-function() inv
   list(set=set, get=get, setInverse=setInv, getInverse=getInv)
 }
-
 
 ## cacheSolve returns the cached inverse of the matrix if there is one.
 ## If not, the inverse is calculated for the first time and cached for reuse. 
